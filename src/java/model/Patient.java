@@ -18,6 +18,11 @@ public class Patient {
     private String phone;
     private Date createdAt;
     private Account account;
+    private String statusName;
+
+    public Patient() {
+        
+    }
 
     public Patient(Integer patientId, String name, String socialId, String address, String phone, Date createdAt, Account account) {
         this.patientId = patientId;
@@ -83,6 +88,14 @@ public class Patient {
 
     public void setAccount(Account account) {
         this.account = account;
+    }
+
+    public String getStatusName() {
+        return statusName;
+    }
+
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
     }
 
     @Override
