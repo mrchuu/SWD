@@ -18,8 +18,6 @@ public class DepartmentDAO extends MyDAO {
     public List<Department> getAll() {
         List<Department> departments = new ArrayList<>();
         xSql = "Select * from Department";
-        String name;
-        Integer departmentId;
         Department department;
         try {
             ps = con.prepareStatement(xSql);
@@ -36,4 +34,20 @@ public class DepartmentDAO extends MyDAO {
         return departments;
     }
 
+    public Department getById(Integer departmentId) {
+        xSql = "Select * from Department where department_id = " + departmentId;
+        Department department = null;
+        try {
+            ps = con.prepareStatement(xSql);
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                department = new Department(rs.getInt("department_id"), rs.getString("name"));
+            }
+            rs.close();
+            ps.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return department;
+    }
 }

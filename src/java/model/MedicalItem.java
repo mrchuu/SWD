@@ -24,6 +24,14 @@ public class MedicalItem {
         this.storage = storage;
         this.quantity = quantity;
     }
+    public MedicalItem(Integer medicalItemId, String name, String image, String provider, Integer quantity) {
+        this.medicalItemId = medicalItemId;
+        this.name = name;
+        this.image = image;
+        this.provider = provider;
+        this.storage = null;
+        this.quantity = quantity;
+    }
 
     public Integer getMedicalItemId() {
         return medicalItemId;

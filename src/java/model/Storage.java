@@ -18,6 +18,11 @@ public class Storage {
         this.storageCode = storageCode;
         this.department = department;
     }
+     public Storage(Integer storageId, String storageCode) {
+        this.storageId = storageId;
+        this.storageCode = storageCode;
+        this.department = null;
+    }
 
     public Integer getStorageId() {
         return storageId;
