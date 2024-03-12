@@ -75,4 +75,64 @@ public class TreatmentPlan {
         this.quantity = quantity;
     }
     
+    public static class Invoice {
+        String serviceName;
+        String unitName;
+        double pricePerUnit;
+        int quantity;
+        double total;
+
+        public String getServiceName() {
+            return serviceName;
+        }
+
+        public void setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+        }
+
+        public String getUnitName() {
+            return unitName;
+        }
+
+        public void setUnitName(String unitName) {
+            this.unitName = unitName;
+        }
+
+        public int getQuantity() {
+            return quantity;
+        }
+        public void setQuantity(int quantity) {
+            this.quantity = quantity;
+        }
+
+        public double getPricePerUnit() {
+            return pricePerUnit;
+        }
+        
+        public void setPricePerUnit(double pricePerUnit) {
+            this.pricePerUnit = pricePerUnit;
+        }
+
+        public void setTotal(double total) {
+            this.total = total;
+        }
+
+        public double getTotal() {
+            return total;
+        }
+
+        public Invoice(String serviceName, String unitName, double pricePerUnit, int quantity, double total) {
+            this.serviceName = serviceName;
+            this.unitName = unitName;
+            this.pricePerUnit = pricePerUnit;
+            this.quantity = quantity;
+            this.total = total;
+        }
+
+        public Invoice() {
+        }
+
+        
+    }
+    
 }
